@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  justify-content: space-around;
+  border-bottom: solid black 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading input,
+.heading button {
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #8f8686;
+}
+.addInputs :first-child {
+  border-bottom-left-radius: 20px;
+}
+.addInputs :last-child {
+  border-bottom-right-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchUser input {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.body {
+  background-color: #0096c7;
+  min-height: 90vh;
+  height: 90%;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.list {
+  width: 30%;
+  min-width: 350px;
+  border: solid black 2px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px 0 0 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.listItem {
+  width: 100%;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+}
+
+.listItem > p {
+  display: flex;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.listItem :nth-child(2) {
+  left: 5%;
+  position: relative;
+  width: 60px;
+}
+
+.listItem :nth-child(3) {
+  left: 5%;
+  position: relative;
+  width: 100px;
+}
+
+.listItem > p:hover {
+  overflow: visible;
+  display: flex;
+}
+.listItem input {
+  min-width: 15px;
+  min-height: 15px;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.listItem button {
+  min-width: 20px;
+  min-height: 20px;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 8px;
+  margin: 10px 20px;
+}
+
+
+.deleteAllUsers {
+  width: 100%;
+  line-height: 2rem;
+  padding: 0 10px;
+  border: none;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 650px) {
+  .heading {
+    flex-direction: column;
+    justify-content: center;
   }
 }
